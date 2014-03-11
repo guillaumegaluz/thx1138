@@ -1,3 +1,3 @@
 Thx1138::Application.routes.draw do
-  root 'shootings#index'
+  root 'movies#index'
 end
