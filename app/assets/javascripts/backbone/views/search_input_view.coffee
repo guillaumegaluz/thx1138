@@ -3,5 +3,11 @@ class @SearchInputView extends Backbone.View
   events:
     'keyup': 'setCurrentQuery'
 
+  initialize: =>
+    query.on 'change:currentMovie', @empty
+
   setCurrentQuery: =>
     query.set('currentQuery', $('.input-wrapper input').val())
+
+  empty: =>
+    @$el.val("")

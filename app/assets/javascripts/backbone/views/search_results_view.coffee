@@ -6,6 +6,7 @@ class @SearchResultsViews extends Backbone.View
 
   initialize: =>
     query.on 'change:currentResults', @render
+    query.on 'change:currentMovie', @clear
 
   render: =>
     return @clear() if query.get('currentQuery').trim() == ""
