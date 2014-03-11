@@ -15,11 +15,18 @@ $responsive-threshold: 768px;
     left: $margin-narrow-width;
     right: $margin-narrow-width;
   }
-
-  .input-label {
-    font-size: 24px;
-    text-shadow: white 1px 1px 1px;
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: bold;
+  .input-wrapper {
+    position: relative;
+    .fa-search {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      font-size: 1.5em;
+      color: rgba(150, 150, 150, 1);
+      font-weight: bold;
+    }
+    input {
+      padding-left: 46px;
+    }
   }
 }

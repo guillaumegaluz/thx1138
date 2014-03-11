@@ -1,5 +1,5 @@
 class @SearchInputView extends Backbone.View
-  el: 'input'
+  el: '.input-wrapper input'
   events:
     'keyup': 'setCurrentQuery'
 
