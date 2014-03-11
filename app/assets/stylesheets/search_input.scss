@@ -1,10 +1,21 @@
-.input-wrapper {
+// TODO - Extract those variables
+$margin-full-width: 25%;
+$margin-narrow-width: 10%;
+$responsive-threshold: 768px;
+
+.main-wrapper {
   position: absolute;
   z-index: 10;
   top: 50px;
-  left: 25%;
-  right: 25%;
+  left: $margin-full-width;
+  right: $margin-full-width;
   text-align: center;
+
+  @media screen and (max-width: $responsive-threshold) {
+    left: $margin-narrow-width;
+    right: $margin-narrow-width;
+  }
+
   .input-label {
     font-size: 24px;
     text-shadow: white 1px 1px 1px;
