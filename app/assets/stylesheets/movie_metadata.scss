@@ -1,0 +1,19 @@
+.line {
+  line-height: 1.1em;
+  .movie-title {
+    font-weight: bold;
+  }
+  .movie-secondary-info {
+    font-size: 16px;
+  }
+  .movie-actors {
+    color: #A19E9E;
+    font-style: italic;
+    font-size: 14px;
+  }
+  .movie-director {
+    color: #A19E9E;
+    font-style: italic;
+    font-size: 14px;
+  }
+}

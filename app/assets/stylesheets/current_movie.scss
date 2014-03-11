@@ -1,0 +1,15 @@
+.current-movie {
+  display: none;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+  padding: 6px 6px 6px 12px;
+  text-align: left;
+  border-radius: 5px;
+  font-size: 18px;
+  .reset-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

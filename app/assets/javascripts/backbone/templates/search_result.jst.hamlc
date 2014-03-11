@@ -1,6 +1,6 @@
 .search-result{'data-movie-id' => @movie.get('id')}
-  .first-line
+  .line
     %span.movie-title= @movie.get('title')
-    %span.movie-release-year (#{@movie.get('release_year')})
-  .second-line
-    %span.movie-actors= @movie.actorsToString()
+    %span.movie-secondary-info (#{@movie.get('release_year')} - #{@movie.get('director')})
+  .line
+    %span.movie-actors #{@movie.actorsToString()}
