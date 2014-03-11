@@ -10,8 +10,9 @@
     %link{:href => "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", :rel => "stylesheet"}
     :javascript
       function initialize() {
+        var sanFrancisco = new google.maps.LatLng(37.78, -122.53)
         var mapOptions = {
-          center: new google.maps.LatLng(37.79, -122.44),
+          center: sanFrancisco,
           zoom: 12,
           disableDefaultUI: true
         };

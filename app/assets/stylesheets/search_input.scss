@@ -1,20 +1,16 @@
-// TODO - Extract those variables
-$margin-full-width: 25%;
-$margin-narrow-width: 10%;
 $responsive-threshold: 768px;
 
 .main-wrapper {
   position: absolute;
   z-index: 10;
-  top: 50px;
-  left: $margin-full-width;
-  right: $margin-full-width;
+  top: 20px;
+  left: 20px;
+  width: 500px;
   text-align: center;
 
   @media screen and (max-width: $responsive-threshold) {
-    left: $margin-narrow-width;
-    right: $margin-narrow-width;
   }
+    
   .input-wrapper {
     position: relative;
     .fa-search {
