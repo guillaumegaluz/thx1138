@@ -1,6 +1,6 @@
 class @SearchResultsViews extends Backbone.View
   el: '.search-results'
-  numberOfResultsToDisplay: 3
+  maxNumberOfResultsToDisplay: 4
   events:
     'click .search-result': 'setCurrentMovie'
 
@@ -10,7 +10,7 @@ class @SearchResultsViews extends Backbone.View
 
   render: =>
     return @clear() if query.get('currentQuery').trim() == ""
-    @results = @getFirstResults(@numberOfResultsToDisplay)
+    @results = @getFirstResults(@maxNumberOfResultsToDisplay)
     if @results.length == 0 then @displayEmptyResult() else @displayResults()
 
   getFirstResults: (integer) =>
