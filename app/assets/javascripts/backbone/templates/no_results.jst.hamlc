@@ -1,0 +1,3 @@
+.notice
+  No result found for
+  %span.query #{@query}

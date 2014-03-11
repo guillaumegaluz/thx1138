@@ -29,7 +29,7 @@ class @SearchResultsViews extends Backbone.View
     @$el.empty()
 
   displayEmptyResult: =>
-    @$el.html("no results")
+    @$el.html(JST['backbone/templates/no_results'](query: query.get('currentQuery')))
 
   setCurrentMovie: (e) =>
     _.each @results, (movie) ->
