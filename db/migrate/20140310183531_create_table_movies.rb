@@ -3,8 +3,6 @@ class CreateTableMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.text :title
       t.integer :release_year
-      t.text :locations
-      t.text :fun_fact
       t.text :production_company
       t.text :distributor
       t.text :director

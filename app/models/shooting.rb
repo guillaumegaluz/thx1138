@@ -1,5 +1,3 @@
 class Shooting < ActiveRecord::Base
-  def self.unique_movies
-    Shooting.select(:title).distinct
-  end
+  belongs_to :movie
 end
