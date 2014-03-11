@@ -31,4 +31,5 @@ class @SearchResultsViews extends Backbone.View
 
   setCurrentMovie: (e) =>
     _.each @results, (movie) ->
-      query.set('currentMovie', movie)  if movie.get('title') == $(e.target).html()
+      query.set('currentMovie', movie)  if movie.get('id') == $(e.target).parent().parent().data('movie-id')
+    console.log query.get('currentMovie')
