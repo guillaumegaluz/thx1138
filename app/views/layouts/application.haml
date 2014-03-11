@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Thx1138
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    %meta{:content => "initial-scale=1.0, user-scalable=no", :name => "viewport"}/
+    %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBd4QJsCTTebNkd8M-ZU2d03sRuwZulCa4&sensor=true", :type => "text/javascript"}
+    :javascript
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(37.79, -122.44),
+          zoom: 12,
+          disableDefaultUI: true
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+  %body
+    = yield
