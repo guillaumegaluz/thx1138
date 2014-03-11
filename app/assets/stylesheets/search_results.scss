@@ -1,0 +1,19 @@
+.search-results {
+  display: none;
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.83);
+  border-radius: 5px;
+  padding: 10px;
+  .search-result {
+    text-align: left;
+    line-height: 33px;
+    padding: 4px 4px 4px 10px;
+    &:hover {
+      background-color: rgba(119, 151, 255, 0.36);
+    }
+    .movie-title {
+      font-size: 20px;
+    }
+  }
+}

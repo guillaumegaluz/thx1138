@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "rails-backbone"
 gem 'haml'
+gem 'haml_coffee_assets'
+gem 'execjs'
 
 group :doc do
   gem 'sdoc', require: false

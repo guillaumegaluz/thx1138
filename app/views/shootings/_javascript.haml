@@ -2,6 +2,6 @@
   $(function() {
     window.movies = new Movies(#{@movies.to_json});
     window.query = new Query();
-    new SearchView();
-    // new AutocompleteView();
+    new SearchInputView();
+    new SearchResultsViews();
   });

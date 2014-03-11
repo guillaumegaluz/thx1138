@@ -18,4 +18,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/thx1138
+//= require hamlcoffee
 //= require_tree .
