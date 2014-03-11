@@ -4,17 +4,31 @@
   height: auto;
   background: rgba(255, 255, 255, 0.83);
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 10px 6px 10px;
   .search-result {
     text-align: left;
-    line-height: 33px;
-    padding: 4px 4px 4px 10px;
+    padding: 8px 4px 8px 10px;
     cursor: pointer;
+    font-size: 18px;
+    border-bottom: solid 1px rgb(219, 219, 219);
+    &:last-child {
+      border-bottom: none;
+    }
     &:hover {
       background-color: rgba(119, 151, 255, 0.36);
     }
+    .first-line, .second-line {
+      line-height: 1.1em;
+    }
     .movie-title {
-      font-size: 20px;
+      font-weight: bold;
+    }
+    .movie-release-year {
+    }
+    .movie-actors {
+      color: #A19E9E;
+      font-style: italic;
+      font-size: 14px;
     }
   }
 }
