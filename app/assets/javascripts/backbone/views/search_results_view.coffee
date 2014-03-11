@@ -8,6 +8,7 @@ class @SearchResultsViews extends Backbone.View
     query.on 'change:currentResults', @render
 
   render: =>
+    return @clear() if query.get('currentQuery').trim() == ""
     @results = @getFirstResults(@numberOfResultsToDisplay)
     if @results.length == 0 then @displayEmptyResult() else @displayResults()
 
