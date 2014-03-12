@@ -1,0 +1,7 @@
+.suggestions
+  or try
+  %span.random-movie{'data-movie-id' => @movies[0].get('id')}= @movies[0].get('title')
+  %span,
+  %span.random-movie{'data-movie-id' => @movies[1].get('id')}= @movies[1].get('title')
+  %span,
+  %span.random-movie{'data-movie-id' => @movies[2].get('id')}= @movies[2].get('title')

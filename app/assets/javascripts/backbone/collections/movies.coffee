@@ -7,3 +7,9 @@ class @Movies extends Backbone.Collection
     @.each (movie) =>
       filtered.push(movie) if movie.get('title').toLowerCase().match(query)
     return filtered
+
+  getRandomMovies: =>
+    randMovies = []
+    _(3).times =>
+      randMovies.push(movies.at(Math.floor(Math.random() * movies.models.length)))
+    return randMovies
