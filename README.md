@@ -1,6 +1,9 @@
 # THX 1138
 
-http://thx1138.herokuapp.com
+Projects: SF movies  
+Technical track: Front-end  
+[http://thx1138.herokuapp.com](http://thx1138.herokuapp.com)  
+[gal.uz](http://gal.uz) - [Linkedin](http://www.linkedin.com/in/guillaumegaluz)   
 
 ### The Name
 
@@ -11,8 +14,8 @@ http://thx1138.herokuapp.com
 ##### Back-end
 Ruby on Rails, with Haml for the views and SASS for the stylesheets.
 
-The back-end is pretty slim: 2 models (Movie and Shooting, with a one-to-many relationship). Two endpoints: `GET /movies` and `GET /shootings/:movie_id`.  
-I thought about using Sinatra - thinner, better dimensioned in this case - but I wanted to benefit from the built-in asset pipeline and not have to configure Sprockets...
+The back-end is pretty slim: 2 models (Movie and Shooting, with a one-to-many relationship). Two endpoints: `GET /movies` and `GET /shootings/:movie_id`.
+I wanted to benefit from the built-in asset pipeline. However if I had to build this app again, I would probably use Sinatra. It's better dimensioned in this case, eventhough I would have to configure Sprockets by hand.
 
 ##### Front-end
 Backbone.js, with Coffeescript, and Haml Coffee for the templates. I used Google Maps API for the map interaction and Geocoding API to get coordinates from an address. 
@@ -41,3 +44,4 @@ For some movies, few markers were being displayed on the map, while the Data SF 
 - Add tests for DOM interactions (I've tested only collection and models on the front-end)
 - Display location metadata when clicking on a map marker (name, fun fact, etc)
 - Improve responsive design.
+
