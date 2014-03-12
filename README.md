@@ -44,4 +44,4 @@ For some movies, markers were being displayed on the map, but much fewer than th
 - Add tests for DOM interactions (I've tested only collection and models on the front-end)
 - Display location metadata when clicking on a map marker (name, fun facts, etc)
 - Improve responsive design.
-
+- When switching movies, recenter and pan the map
