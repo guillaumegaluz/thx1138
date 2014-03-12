@@ -3,7 +3,8 @@ class @Shooting extends Backbone.Model
     @getCoordinates()
 
   getCoordinates: =>
-    url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{@get('locations')}&sensor=false"
+    location = "#{@get('locations')}, San Francisco, CA"
+    url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&sensor=false"
     
     $.ajax
       type: 'GET'
