@@ -6,7 +6,7 @@ $responsive-threshold: 768px;
 .main-wrapper {
   position: absolute;
   z-index: 10;
-  width: 600px;
+  min-width: 600px;
   top: 30px;
   left: $margin-full-width;
   right: $margin-full-width;
@@ -19,6 +19,7 @@ $responsive-threshold: 768px;
   @media screen and (max-width: $responsive-threshold) {
     left: $margin-narrow-width;
     right: $margin-narrow-width;
+    min-width: 0px;
   }
 
   .input-wrapper {
