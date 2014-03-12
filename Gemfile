@@ -20,3 +20,10 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'konacha'
+  gem 'guard-konacha'
+  gem 'selenium-webdriver'
+end
