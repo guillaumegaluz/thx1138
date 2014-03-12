@@ -1,13 +1,13 @@
 class @InputView extends Backbone.View
   el: '.input-wrapper input'
   events:
-    'keyup': 'setCurrentQuery'
+    'keyup': 'setQuery'
 
   initialize: =>
-    pageState.on 'change:currentMovie', @empty
+    pageState.on 'change:movie', @empty
 
-  setCurrentQuery: =>
-    pageState.set('currentQuery', @$el.val())
+  setQuery: =>
+    pageState.set('query', @$el.val())
 
   empty: =>
     @$el.val("")

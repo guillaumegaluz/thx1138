@@ -4,11 +4,11 @@ class @MapView extends Backbone.View
   initialize: =>
     @markers = []
     pageState.on 'coordinates_set', @displayPins
-    pageState.on 'change:currentMovie', @removePins
+    pageState.on 'change:movie', @removePins
     pageState.on 'reset_movie', @removePins
 
   displayPins: =>
-    _.each pageState.get('currentShootings').models, (shooting) =>
+    _.each pageState.get('shootings').models, (shooting) =>
       marker = new google.maps.Marker
         position: new google.maps.LatLng(shooting.get('latitude'), shooting.get('longitude'))
         map: window.map
