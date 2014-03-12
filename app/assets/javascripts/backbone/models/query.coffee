@@ -6,10 +6,10 @@ class @PageState extends Backbone.Model
     shootings: null
 
   initialize: =>
-    @on 'change:query', @getMovies
+    @on 'change:query', @setResults
     @on 'change:movie', @fetchShootings
 
-  getMovies: =>
+  setResults: =>
     @set('results', movies.filter(@get('query')))
 
   fetchShootings: =>
