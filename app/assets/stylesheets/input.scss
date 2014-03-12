@@ -1,14 +1,24 @@
+// TODO - Extract those variables
+$margin-full-width: 25%;
+$margin-narrow-width: 10%;
 $responsive-threshold: 768px;
 
 .main-wrapper {
   position: absolute;
   z-index: 10;
-  top: 20px;
-  left: 20px;
   width: 600px;
+  top: 30px;
+  left: $margin-full-width;
+  right: $margin-full-width;
   text-align: center;
+  border: solid rgb(100, 100, 100);
+  padding: 20px 20px 12px 20px;
+  background-color: white;
+  border-radius: 5px;
 
   @media screen and (max-width: $responsive-threshold) {
+    left: $margin-narrow-width;
+    right: $margin-narrow-width;
   }
 
   .input-wrapper {
@@ -23,6 +33,7 @@ $responsive-threshold: 768px;
     }
     input {
       padding-left: 46px;
+      margin-bottom: 12px;
     }
   }
 }
