@@ -1,21 +1,21 @@
 class @PageState extends Backbone.Model
   defaults:
-    currentQuery: null
-    currentResults: null
-    currentMovie: null
-    currentShootings: null
+    query: null
+    results: null
+    movie: null
+    shootings: null
 
   initialize: =>
-    @on 'change:currentQuery', @getMovies
-    @on 'change:currentMovie', @fetchShootings
+    @on 'change:query', @getMovies
+    @on 'change:movie', @fetchShootings
 
   getMovies: =>
-    @set('currentResults', movies.filter(@get('currentQuery')))
+    @set('results', movies.filter(@get('query')))
 
   fetchShootings: =>
     $.ajax
       type: 'GET'
-      url: "/shootings/#{@get('currentMovie').get('id')}"
+      url: "/shootings/#{@get('movie').get('id')}"
       dataType: 'json'
       success: (data) => 
-        @set('currentShootings', new Shootings(data))
+        @set('shootings', new Shootings(data))
