@@ -1,8 +1,8 @@
 class @ResultsViews extends Backbone.View
-  el: '.search-results'
+  el: '.results'
   maxNumberOfResultsToDisplay: 4
   events:
-    'click .search-result': 'setCurrentMovie'
+    'click .result': 'setCurrentMovie'
 
   initialize: =>
     query.on 'change:currentResults', @render
