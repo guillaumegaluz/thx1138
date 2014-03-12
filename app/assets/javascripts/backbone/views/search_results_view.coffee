@@ -23,7 +23,7 @@ class @SearchResultsViews extends Backbone.View
     @clear()
     @$el.show(0)
     _.each @results, (result) =>
-      @$el.append(JST['backbone/templates/search_result'](movie: result))
+      @$el.append(JST['backbone/templates/result'](movie: result))
 
   clear: =>
     @$el.empty()
