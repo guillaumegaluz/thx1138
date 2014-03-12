@@ -2,5 +2,6 @@
   %span.movie-title= @movie.get('title')
   %span.movie-secondary-info (#{@movie.get('release_year')} - #{@movie.get('director')})
 .line
+  %i.fa.fa-star
   %span.movie-actors #{@movie.actorsToString()}
 .reset-button.btn.btn-primary.btn-s Reset

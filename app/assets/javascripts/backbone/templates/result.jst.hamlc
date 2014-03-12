@@ -3,4 +3,6 @@
     %span.movie-title= @movie.get('title')
     %span.movie-secondary-info (#{@movie.get('release_year')} - #{@movie.get('director')})
   .line
+    - if @movie.actorsToString() != ""
+      %i.fa.fa-star
     %span.movie-actors #{@movie.actorsToString()}
