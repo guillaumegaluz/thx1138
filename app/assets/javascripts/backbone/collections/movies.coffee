@@ -11,5 +11,5 @@ class @Movies extends Backbone.Collection
   getRandomMovies: =>
     randMovies = []
     _(3).times =>
-      randMovies.push(movies.at(Math.floor(Math.random() * movies.models.length)))
+      randMovies.push(@.at(Math.floor(Math.random() * @.models.length)))
     return randMovies
