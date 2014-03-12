@@ -1,1 +1,1 @@
-#= require ../app/javascripts/backbone/application
+#= require application
