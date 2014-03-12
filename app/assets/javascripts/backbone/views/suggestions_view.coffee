@@ -22,4 +22,4 @@ class @SuggestionsView extends Backbone.View
     @$el.show(0)
 
   toggle: =>
-    if query.get('currentQuery').trim() != "" then @hide() else @show()
+    if query.get('currentQuery').trim() != "" || query.get('currentMovie') then @hide() else @show()
