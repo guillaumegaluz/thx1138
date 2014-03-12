@@ -8,7 +8,7 @@ class @MovieView extends Backbone.View
     query.on 'reset_movie', @clear
 
   render: =>
-    @$el.show(0).html(JST['backbone/templates/current_movie'](movie: query.get('currentMovie')))
+    @$el.show(0).html(JST['backbone/templates/movie'](movie: query.get('currentMovie')))
 
   clear: =>
     @$el.empty().hide(0)
