@@ -1,13 +1,13 @@
 # THX 1138
 
-Projects: SF movies  
+Project: SF movies  
 Technical track: Front-end  
 [http://thx1138.herokuapp.com](http://thx1138.herokuapp.com)  
 [gal.uz](http://gal.uz) - [Linkedin](http://www.linkedin.com/in/guillaumegaluz)   
 
 ### The Name
 
-[THX 1138](http://en.wikipedia.org/wiki/THX_1138) is a 1971 movie directed by George Lucas - his first film as a director. It was filmed in many locations around San Francisco, but somehow didn;t figure in the database used for this app!
+[THX 1138](http://en.wikipedia.org/wiki/THX_1138) is a 1971 movie directed by George Lucas - his first film as a director. It was filmed in many locations around San Francisco, but somehow didn't figure in the database used for this app!
 
 ### The Stack
 
@@ -28,20 +28,20 @@ A central part of the app is the `PageState` Backbone model: it knows about the 
 
 ##### Autocomplete
 
-I decided to implement the autocomplete feature myself. I could have used a plugin but I thought it would be fun to use Backbone to do it. It didn't turn out to be as hard as I thought eventhough I don't currently support keyboard events ('Enter' to submit forn, 'up' and 'down' arrows to navigate results)
+I decided to implement the autocomplete feature myself. I could have used a plugin but I thought it would be fun to use Backbone to do it. It didn't turn out to be as hard as I thought eventhough I don't currently support keyboard events ('Enter' to submit form, 'up' and 'down' arrows to navigate results)
 
 ##### Suggestions
 
-I added 3 movie suggestions under the search input. The change when the page reloads or when a movie is resetted. It seems like a detail feature but it turned out to be crucial in the development of the app: because they are randomly taken from the pool of movies, it allowed me to "test" the app with various movies, instead of picking always the same (Vertigo, The Rock, Bullitt, etc). It helped me find (and fix) some display interesting bugs: long titles, no actors, etc
+I added 3 movie random suggestions under the search input. The change when the page reloads or when a movie is resetted. It seems like a detail feature but it turned out to be crucial in the development of the app: because they are randomly taken from the pool of movies, it allowed me to "test" the app with various movies, instead of picking always the same (Vertigo, The Rock, Bullitt, etc). It helped me find (and fix) some display interesting bugs: long titles, no actors, etc
 
 ##### A quick win
 
-For some movies, few markers were being displayed on the map, while the Data SF database was showing many more shootings. The reason was that - for example - "3355 Geary Blvd" is just not specific to San Francisco. I fixed that by appending "San Francisco, CA" to every geocode request. It definitely improved the quality of coordinate generation! [commit c8ab580b74](https://github.com/guillaumegaluz/thx1138/commit/c8ab580b742663cb862e7301014c8e44196a71a8)
+For some movies, markers were being displayed on the map, but much fewer than the Data SF database was showing. The reason was that "3355 Geary Blvd" is just not specific to San Francisco. I fixed that by appending "San Francisco, CA" to every geocode request. It definitely improved the quality of coordinate generation! [commit c8ab580b74](https://github.com/guillaumegaluz/thx1138/commit/c8ab580b742663cb862e7301014c8e44196a71a8)
 
 ### To Do
 
 - [Bug] If a movie is selected and you search for the same movie, it will appear in the autocomplete results and not be selectable.
 - Add tests for DOM interactions (I've tested only collection and models on the front-end)
-- Display location metadata when clicking on a map marker (name, fun fact, etc)
+- Display location metadata when clicking on a map marker (name, fun facts, etc)
 - Improve responsive design.
 
