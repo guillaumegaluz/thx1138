@@ -19,5 +19,5 @@ class @Shooting extends Backbone.Model
       coordinates = data["results"][0]["geometry"]["location"]
       @set('longitude', coordinates.lng)
       @set('latitude', coordinates.lat)
-    query.trigger('coordinates_set')
+    pageState.trigger('coordinates_set')
 

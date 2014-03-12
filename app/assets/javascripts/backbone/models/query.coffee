@@ -1,4 +1,4 @@
-class @Query extends Backbone.Model
+class @PageState extends Backbone.Model
   defaults:
     currentQuery: null
     currentResults: null

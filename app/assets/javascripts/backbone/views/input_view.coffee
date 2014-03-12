@@ -4,10 +4,10 @@ class @InputView extends Backbone.View
     'keyup': 'setCurrentQuery'
 
   initialize: =>
-    query.on 'change:currentMovie', @empty
+    pageState.on 'change:currentMovie', @empty
 
   setCurrentQuery: =>
-    query.set('currentQuery', @$el.val())
+    pageState.set('currentQuery', @$el.val())
 
   empty: =>
     @$el.val("")

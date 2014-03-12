@@ -1,7 +1,7 @@
 :javascript
   $(function() {
     window.movies = new Movies(#{@movies.to_json});
-    window.query = new Query();
+    window.pageState = new PageState();
     new MapView();
     new InputView();
     new ResultsViews();

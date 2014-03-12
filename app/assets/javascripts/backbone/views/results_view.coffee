@@ -5,17 +5,17 @@ class @ResultsViews extends Backbone.View
     'click .result': 'setCurrentMovie'
 
   initialize: =>
-    query.on 'change:currentResults', @render
-    query.on 'change:currentMovie', @clear
+    pageState.on 'change:currentResults', @render
+    pageState.on 'change:currentMovie', @clear
 
   render: =>
-    return @clear() if query.get('currentQuery').trim() == ""
+    return @clear() if pageState.get('currentQuery').trim() == ""
     @results = @getFirstResults(@maxNumberOfResultsToDisplay)
     if @results.length == 0 then @displayEmptyResult() else @displayResults()
 
   getFirstResults: (integer) =>
     results = []
-    _.each query.get('currentResults'), (result, i) ->
+    _.each pageState.get('currentResults'), (result, i) ->
       results.push(result)  if i < integer
     return results
 
@@ -29,8 +29,8 @@ class @ResultsViews extends Backbone.View
     @$el.empty()
 
   displayEmptyResult: =>
-    @$el.html(JST['backbone/templates/no_results'](query: query.get('currentQuery')))
+    @$el.html(JST['backbone/templates/no_results'](query: pageState.get('currentQuery')))
 
   setCurrentMovie: (e) =>
     _.each @results, (movie) ->
-      query.set('currentMovie', movie)  if movie.get('id') == $(e.target).parent().parent().data('movie-id')
+      pageState.set('currentMovie', movie)  if movie.get('id') == $(e.target).parent().parent().data('movie-id')
