@@ -1,4 +1,4 @@
-class @CurrentMovieView extends Backbone.View
+class @MovieView extends Backbone.View
   el: '.current-movie'
   events:
     'click .reset-button': 'resetCurrentMovie'

@@ -1,4 +1,4 @@
-class @SearchResultsViews extends Backbone.View
+class @ResultsViews extends Backbone.View
   el: '.search-results'
   maxNumberOfResultsToDisplay: 4
   events:
