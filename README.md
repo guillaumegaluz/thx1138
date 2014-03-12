@@ -9,13 +9,13 @@ http://thx1138.herokuapp.com
 ### The Stack
 
 ##### Back-end
-**Ruby on Rails**, with **Haml** for the views and **SASS** for the stylesheets.
+Ruby on Rails, with Haml for the views and SASS for the stylesheets.
 
-The back-end is pretty slim: 2 models (Movie and Shooting, with a one-to-many relationship). Two main endpoints: `GET /movies` and `GET /shootings/:movie_id`.  
-I hesitated between Rails and Sinatra (Sinatra is better dimensioned for this case), but I wanted to benefit from the built-in asset pipeline and not have to configure Sprockets...
+The back-end is pretty slim: 2 models (Movie and Shooting, with a one-to-many relationship). Two endpoints: `GET /movies` and `GET /shootings/:movie_id`.  
+I thought about using Sinatra - thinner, better dimensioned for this case - but I wanted to benefit from the built-in asset pipeline and not have to configure Sprockets...
 
 ##### Front-end
-**Backbone.js**, with **Coffeescript**, and **Haml Coffee** for the templates. I used **Google Maps API** for the map interaction and **Geocoding API** to get coordinates from an address. 
+Backbone.js, with Coffeescript, and Haml Coffee for the templates. I used Google Maps API for the map interaction and Geocoding API to get coordinates from an address. 
 
 On page load, movies are stored in JS objects, and it's only when a movie is selected that an AJAX request is made to the server to get the shooting locations.
 
@@ -35,3 +35,8 @@ I added 3 movie suggestions under the search input. The change when the page rel
 
 For some movies, few markers were being displayed on the map, while the Data SF database was showing many more shootings. The reason was that - for example - "3355 Geary Blvd" is just not specific to San Francisco. I fixed that by appending "San Francisco, CA" to every geocode request. It definitely improved the quality of coordinate generation! [commit c8ab580b74](https://github.com/guillaumegaluz/thx1138/commit/c8ab580b742663cb862e7301014c8e44196a71a8)
 
+### TODO
+
+- [Bug] If a movie is selected and you search for the same movie, it will appear in the autocomplete results and not be selectable.
+- The app is basically responsive but it could definitely be improved.
+- Display location metadata (name, fun fact, etc) when clicking on a map marker.
